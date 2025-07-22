@@ -8,6 +8,17 @@ export default defineEventHandler(async (event) => {
   if (event.method === "GET") {
     const start = Date.now()
 
+    // const albums = await gristSql(`
+    //   SELECT 
+    //     Albums.id,
+    //     Albums.Name as name,
+    //     Albums.Languages as languages,
+    //     COUNT(Words.id) as wordCount
+    //   FROM Albums
+    //   FULL JOIN Words ON Words.AlbumId = Albums.id
+    //   GROUP BY Albums.id, Albums.Name, Albums.Languages
+    // `)
+
     const albums = await gristSql(`
       SELECT 
         Albums.id,
@@ -15,7 +26,7 @@ export default defineEventHandler(async (event) => {
         Albums.Languages as languages,
         COUNT(Words.id) as wordCount
       FROM Albums
-      FULL JOIN Words ON Words.AlbumId = Albums.id
+      LEFT JOIN Words ON Words.AlbumId = Albums.id
       GROUP BY Albums.id, Albums.Name, Albums.Languages
     `)
 
@@ -30,6 +41,8 @@ export default defineEventHandler(async (event) => {
   if (event.method === "POST") {
     const body = await readBody(event)
     const { name, languages } = body as { name: string; languages: Language[] }
+
+    console.log(body)
 
     if (!name) {
       throw createError({

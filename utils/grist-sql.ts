@@ -19,7 +19,11 @@ export async function gristSql<T extends IRecord>(query: string, args?: any[]) {
     body,
   })
 
+  // console.log(body)
+
   const data: { records: { fields: T & IRecord }[] } = await response.json()
+
+  console.log(data)
 
   return data.records.map((record) => record.fields)
 }

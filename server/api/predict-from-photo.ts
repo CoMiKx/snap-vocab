@@ -116,6 +116,8 @@ export default defineEventHandler(async (event) => {
     Key: key,
   }))
 
+  console.log(records)
+
   await grist.addRecords("Words", records)
 
   return predictions.filter((p) => languages.includes(p.language))

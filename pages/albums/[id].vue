@@ -84,6 +84,10 @@ onMounted(() => {
           v-for="word in filteredWords"
           class="flex flex-col bg-slate-900 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 justify-between"
         >
+          <!-- <div class="text-red-500 text-xs">
+            DEBUG: attachmentId = {{ word.attachmentId }}
+          </div> -->
+
           <div class="relative">
             <img
               v-if="word.attachmentId"
