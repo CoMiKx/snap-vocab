@@ -1,8 +1,8 @@
-# Flashcard Scavenger Hunt 🌟
+# Snap Vocab 🌟
 
 A fun and interactive way to learn vocabulary through real-world object recognition and drawing. Turn your everyday environment into a language learning playground!
 
-**Live Demo:** https://flashcard.poom.dev *(Special thanks for the inspiration!)*
+**Live Demo:** https://snap-vocab.vercel.app/ 
 
 ## ✨ Features
 
@@ -64,14 +64,12 @@ A fun and interactive way to learn vocabulary through real-world object recognit
 2. **Install dependencies**
    ```bash
    # Main application
-   bun install
-   # or
    npm install
+   # or
+   bun install
    
    # PartyKit server
    cd party
-   bun install
-   # or
    npm install
    ```
 
@@ -126,8 +124,7 @@ Create these tables in your Grist document:
 
 ```bash
 cd party
-bun install
-bun run deploy
+npm run deploy
 ```
 
 Copy the deployed URL to your `.env` file as `NUXT_PUBLIC_PARTYKIT_HOST`.
@@ -136,11 +133,11 @@ Copy the deployed URL to your `.env` file as `NUXT_PUBLIC_PARTYKIT_HOST`.
 
 ```bash
 # Development mode
-bun run dev
+npm run dev
 
 # Production build
-bun run build
-bun start
+npm run build
+npm start
 ```
 
 Visit `http://localhost:3000` to start learning! 🎉

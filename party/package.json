@@ -1,6 +1,6 @@
 {
-  "name": "nuxt-app-party",
-  "version": "0.0.0",
+  "name": "snap-vocab-party",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "partykit dev --live",

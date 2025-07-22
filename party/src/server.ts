@@ -1,6 +1,6 @@
 import type * as Party from "partykit/server"
 
-const API_PREFIX = process.env.API_PREFIX ?? "https://flashcards.comikx.dev"
+const API_PREFIX = process.env.API_PREFIX ?? "https://snap-vocab.vercel.app/"
 
 interface RoomState {
   currentWord?: {

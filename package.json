@@ -1,5 +1,7 @@
-{
-  "name": "nuxt-app",
+{  
+  "version": "0.1.0",
+  "name": "snap-vocab",
+  "description": "Interactive vocabulary learning through photos and drawings",
   "private": true,
   "type": "module",
   "scripts": {
