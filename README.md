@@ -64,13 +64,13 @@ A fun and interactive way to learn vocabulary through real-world object recognit
 2. **Install dependencies**
    ```bash
    # Main application
-   npm install
-   # or
    bun install
+   # or
+   npm install
    
    # PartyKit server
    cd party
-   npm install
+   bun install
    ```
 
 3. **Environment Setup**
@@ -124,7 +124,7 @@ Create these tables in your Grist document:
 
 ```bash
 cd party
-npm run deploy
+bun run deploy
 ```
 
 Copy the deployed URL to your `.env` file as `NUXT_PUBLIC_PARTYKIT_HOST`.
@@ -133,11 +133,11 @@ Copy the deployed URL to your `.env` file as `NUXT_PUBLIC_PARTYKIT_HOST`.
 
 ```bash
 # Development mode
-npm run dev
+bun run dev
 
 # Production build
-npm run build
-npm start
+bun run build
+bun start
 ```
 
 Visit `http://localhost:3000` to start learning! 🎉
