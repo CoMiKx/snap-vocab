@@ -1,0 +1,45 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "start": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity": "^3.716.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.716.0",
+    "@aws-sdk/client-polly": "^3.716.0",
+    "@aws-sdk/client-s3": "^3.717.0",
+    "@google/generative-ai": "^0.21.0",
+    "@iconify/vue": "^4.2.0",
+    "@nuxtjs/tailwindcss": "6.12.2",
+    "classnames": "^2.5.1",
+    "compressorjs": "^1.2.1",
+    "grist-api": "^0.1.7",
+    "is-png": "^3.0.1",
+    "lodash": "^4.17.21",
+    "nanoid": "^5.0.9",
+    "nuxt": "^3.14.1592",
+    "nuxt-particles": "^0.3.0",
+    "partykit": "^0.0.111",
+    "partysocket": "^1.0.3",
+    "sharp": "^0.33.5",
+    "vue": "latest",
+    "vue-drawing-canvas": "^1.0.14",
+    "vue-router": "latest"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@tsparticles/engine",
+    "esbuild",
+    "sharp",
+    "workerd"
+  ],
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}
